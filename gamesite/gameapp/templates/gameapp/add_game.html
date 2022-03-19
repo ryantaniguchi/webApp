@@ -1,0 +1,27 @@
+<!-- HTML template for page that allows users to add additional games to the database -->
+{% extends 'gameapp/base.html' %}
+
+<!-- Title that appears for the page -->
+{% block title %}
+Add Game
+{% endblock %}
+
+<!-- Content that appears towards the top of the screen -->
+{% block detail %}
+Add New Games
+{% endblock %}
+
+<!-- Form that allows a user to enter a new game's details -->
+{% block content %}
+<div class="container">
+    <form method="POST">
+      <fieldset>
+        <legend>Enter Game Details</legend>
+          <br>
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </fieldset>
+    </form>
+</div>
+{% endblock %}

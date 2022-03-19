@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<!-- Base HTML template that is inherited by most other html files -->
+
+<head>
+    <!-- Required meta tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    {% load static %}
+    <!-- Uses css style sheets for formatting and style -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <!-- Title of webpage -->
+    <title>{% block title  %}Web App{% endblock %}</title>
+
+</head>
+<!-- Menus that appear on each page -->
+<body>
+<div id="container">
+		<div id="header">
+            <h1>
+                {% block detail %}
+                {% endblock %}
+            </h1>
+        </div>
+        <!-- Top menu with the main parts of the website, including adding games and links to other sites -->
+        <div id="menu">
+        	<ul>
+                <li class="menuitem"><a href="/">Home</a></li>
+                <li class="menuitem"><a href="/add-game">Add Game</a></li>
+                <li class="menuitem"><a href="/links">Links</a></li>
+                <li class="menuitem"><a href="/admin">Admin</a></li>
+            </ul>
+        </div>
+
+        <!-- Side menu that includes data analysis and game category listings -->
+        <div id="leftmenu">
+
+        <div id="leftmenu_top"></div>
+
+				<div id="leftmenu_main">
+
+                <h3>Game Lists</h3>
+                <ul>
+                    <li><a href="/rated-index">Game List</a></li>
+                    <li><a href="/thematic-index">Thematic Games List</a></li>
+                    <li><a href="/strategic-index">Strategic Games List</a></li>
+                    <li><a href="/war-index">War Games List</a></li>
+                    <li><a href="/family-index">Family Games List</a></li>
+                    <li><a href="/cgs-index">CGS Games List</a></li>
+                    <li><a href="/abstract-index">Abstract Games List</a></li>
+                    <li><a href="/party-index">Party Games List</a></li>
+                    <li><a href="/children-index">Children's Games List</a></li>
+                </ul>
+        </div>
+            <div id="leftmenu_bottom"></div>
+        </div>
+
+		<div id="content">
+
+        <div id="content_top"></div>
+        <div id="content_main">
+                {% block content %}
+                {% endblock %}
+</div>
+        <!-- Footer content, including credits to florida web design -->
+        <div id="content_bottom"></div>
+            <div id="footer"><h3><a href="http://www.bryantsmith.com">florida web design</a></h3></div>
+      </div>
+   </div>
+</body>
+</html>

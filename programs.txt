@@ -1,0 +1,6 @@
+django
+django-import-export
+pandas
+python
+pycharm
+https://www.html.am/templates/simple-website-templates/

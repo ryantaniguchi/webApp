@@ -1,0 +1,24 @@
+<!-- HTML template for the homepage -->
+{% extends 'gameapp/base.html' %}
+
+<!-- Title that appears for the page -->
+{% block title %}
+Home Page
+{% endblock %}
+
+<!-- Content that appears towards the top of the screen -->
+{% block detail %}
+Home
+{% endblock %}
+
+
+{% block content %}
+    <!-- Lists all games in the database, as well as links to the individual page for each -->
+    <h2>Game List</h2>
+    <br>
+    <ul>
+        {% for game in game_list %}
+            <li><a href="/game/{{ game.BGGId }}">{{ game.Name }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}

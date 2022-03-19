@@ -1,0 +1,17 @@
+<!-- HTML template for pages that show details for individual games -->
+{% extends 'gameapp/base.html' %}
+
+<!-- Title that appears for the page -->
+{% block title %} {{ game.Name }} {% endblock %}
+
+<!-- Name of the specific game that appears towards the top of the screen -->
+{% block detail %}
+{{ game.Name }}
+{% endblock %}
+
+<!-- Title, Average Ratings, and Number of Ratings for each game -->
+{% block content %}
+    <p>Title: {{ game.Name }}</p>
+    <p>Average Ratings: {{ game.AvgRating }} </p>
+    <p>Number of Reviews: {{ game.Ratings }} </p>
+{% endblock %}

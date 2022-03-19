@@ -1,0 +1,18 @@
+<!-- HTML template for each index page -->
+{% extends 'gameapp/base.html' %}
+
+<!-- Title that appears for the page -->
+{% block title %}
+Game Data
+{% endblock %}
+
+<!-- Content that appears towards the top of the screen -->
+{% block detail %}
+Game Index
+{% endblock %}
+
+<!-- Lists the dataframe details for each game in the specified index -->
+{% block content %}
+
+    {{df|safe}}
+{% endblock %}
