@@ -25,10 +25,10 @@ This software was developed as a means of learning more about the Django framewo
 
 # Development Environment
 
-This program was developed in Pycharm 2021.3.2 Community Edition using the Django framework.
+This program was developed in Pycharm 2021.3.2 Community Edition using Python 3.9 and the Django framework.
 
 The following libraries were used to create this software:
-* django 4.0.3
+* Django 4.0.3
 * pandas 1.4.1
 
 # Useful Websites
